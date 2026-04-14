@@ -1,20 +1,11 @@
 #!/usr/bin/python3
-
-import calculator_1
-
 if __name__ == "__main__":
+    from calculator_1 import add, sub, mul, div
+
     a = 10
     b = 5
 
-    # Əməliyyatları icra edib nəticələri çap et
-    result = calculator_1.add(a, b)
-    print(f"{a} + {b} = {result}")
-
-    result = calculator_1.sub(a, b)
-    print(f"{a} - {b} = {result}")
-
-    result = calculator_1.mul(a, b)
-    print(f"{a} * {b} = {result}")
-
-    result = calculator_1.div(a, b)
-    print(f"{a} / {b} = {result}")
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
