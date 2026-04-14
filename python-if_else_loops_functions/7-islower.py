@@ -1,5 +1,6 @@
-#!/usr/bin/python3
+# 7-islower.py
 def islower(c):
-    """Checks for lowercase character."""
-    return ord("a") <= ord(c) <= ord("z")
-    
+    return ord('a') <= ord(c) <= ord('z')
+
+# Yeni sətir əlavə etmək üçün Enter düyməsini basın
+print(islower("a"))  # Bu sətir yeni əlavə edilmişdir
