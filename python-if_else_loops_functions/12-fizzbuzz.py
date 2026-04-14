@@ -11,8 +11,4 @@ def fizzbuzz():
         else:
             output = "{}".format(i)
 
-        # Eğer sayı 100 ise (son sayı), yanına boşluk koyma
-        if i < 100:
-            print("{}".format(output), end=" ")
-        else:
-            print("{}".format(output), end="")
+        print("{}".format(output), end=" ")
