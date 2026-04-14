@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 def fizzbuzz():
+    """1'den 100'e kadar FizzBuzz kurallarıyla yazdırır."""
     for i in range(1, 101):
-        if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz", end=" ")
+        if i % 15 == 0:
+            output = "FizzBuzz"
         elif i % 3 == 0:
-            print("Fizz", end=" ")
+            output = "Fizz"
         elif i % 5 == 0:
-            print("Buzz", end=" ")
+            output = "Buzz"
         else:
-            print("{}".format(i), end=" ")
+            output = "{}".format(i)
+
+        print("{}".format(output), end=" ")
