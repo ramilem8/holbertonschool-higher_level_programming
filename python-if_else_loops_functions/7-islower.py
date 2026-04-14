@@ -1,6 +1,5 @@
-# 7-islower.py
+#!/usr/bin/python3
 def islower(c):
     return ord('a') <= ord(c) <= ord('z')
 
-# Yeni sətir əlavə etmək üçün Enter düyməsini basın
-print(islower("a"))  # Bu sətir yeni əlavə edilmişdir
+print(islower("a"))  
