@@ -1,40 +1,39 @@
 #!/usr/bin/python3
-"""This module defines a Rectangle class"""
+"""This module defines a Rectangle class."""
 
 
 class Rectangle:
-    """Rectangle class with width and height validation"""
+    """Rectangle class with width and height validation."""
 
-    def __init__(self,width=0, height=0):
-        """Initialize rectangle with width and height"""
-        self.width=width
+    def __init__(self, width=0, height=0):
+        """Initialize rectangle."""
+        self.width = width
         self.height = height
 
     @property
-
-def width (self):
-    """Retrieve the width"""
+    def width(self):
+        """Retrieve the width."""
         return self.__width
 
     @width.setter
-    def width(self,value):
-        """Set the width with validation"""
-        if not isinstance(value,int):
-            raise TypeError("width must be integer")
+    def width(self, value):
+        """Set the width."""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >=0")
-        self ._width=value
+            raise ValueError("width must be >= 0")
+        self.__width = value
 
     @property
-    def height (self):
-        """Retrieve the height"""
+    def height(self):
+        """Retrieve the height."""
         return self.__height
 
-    @height.setter    
-    def height (self,value)
-    """set the height with validation"""
-    if not isinstance(value,int):
-        raise TYpeError("Height must be integer")
-    if value <0:
-        raise ValueError ("height must be >=0")
-    self .__height=value
+    @height.setter
+    def height(self, value):
+        """Set the height."""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
