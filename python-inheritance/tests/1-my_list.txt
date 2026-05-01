@@ -1,0 +1,100 @@
+>>> MyList = __import__('1-my_list').MyList
+
+Test 1: Basic functionality
+---------------------------
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+
+Test 2: Empty list
+------------------
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
+
+
+Test 3: Already sorted list
+---------------------------
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> print(my_list)
+[1, 2, 3]
+>>> my_list.print_sorted()
+[1, 2, 3]
+>>> print(my_list)
+[1, 2, 3]
+
+
+Test 4: Reverse sorted list
+---------------------------
+>>> my_list = MyList()
+>>> my_list.append(5)
+>>> my_list.append(4)
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append(1)
+>>> print(my_list)
+[5, 4, 3, 2, 1]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[5, 4, 3, 2, 1]
+
+
+Test 5: Duplicate values
+------------------------
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> print(my_list)
+[3, 1, 2, 3, 1]
+>>> my_list.print_sorted()
+[1, 1, 2, 3, 3]
+>>> print(my_list)
+[3, 1, 2, 3, 1]
+
+
+Test 6: Single element
+----------------------
+>>> my_list = MyList()
+>>> my_list.append(42)
+>>> print(my_list)
+[42]
+>>> my_list.print_sorted()
+[42]
+>>> print(my_list)
+[42]
+
+
+Test 7: Negative element
+------------------------
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(-1)
+>>> my_list.append(2)
+>>> my_list.append(0)
+>>> print(my_list)
+[3, -1, 2, 0]
+>>> my_list.print_sorted()
+[-1, 0, 2, 3]
+>>> print(my_list)
+[3, -1, 2, 0]
