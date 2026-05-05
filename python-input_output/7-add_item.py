@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Adds all command line arguments to a list and saves them to a JSON file."""
+
 import sys
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
