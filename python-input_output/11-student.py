@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a Student class."""
 
+
 class Student:
     """Student class."""
 
@@ -12,7 +13,6 @@ class Student:
 
     def to_json(self, attrs=None):
         """Returns dictionary representation of the instance.
-
         If attrs is a list of strings, only those attributes are returned.
         Otherwise, return all attributes.
         """
