@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Basic serialization module."""
 
-import jso
+import json
 
 
 def serialize_and_save_to_file(data, filename):
