@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Displays all states matching a given name"""
-
+"""Script that filters states by user input"""
 import MySQLdb
 import sys
+
 
 if __name__ == "__main__":
     db = MySQLdb.connect(
@@ -12,17 +12,14 @@ if __name__ == "__main__":
         passwd=sys.argv[2],
         db=sys.argv[3]
     )
-
-    cur = db.cursor()
-
-    # using format as required
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(sys.argv[4])
-    cur.execute(query)
-
-    rows = cur.fetchall()
-
+    cursor = db.cursor()
+    cursor.execute(
+        "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
+            sys.argv[4]
+        )
+    )
+    rows = cursor.fetchall()
     for row in rows:
         print(row)
-
-    cur.close()
+    cursor.close()
     db.close()
