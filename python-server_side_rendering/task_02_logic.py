@@ -19,6 +19,7 @@ def contact():
 def items():
     with open('items.json', 'r') as f:
         data = json.load(f)
+
     return render_template('items.html', items=data['items'])
 
 if __name__ == '__main__':
